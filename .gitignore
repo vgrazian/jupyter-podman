@@ -1,0 +1,141 @@
+# .gitignore for Jupyter Podman Project
+
+# VS Code settings
+.vscode/
+!.vscode/settings.json.example # Keep example settings
+
+# Python
+__pycache__/
+*.py
+c
+o
+d
+cod
+*.pyo
+*.pyd
+.Python
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+pip-delete-this-directory.tmp
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Notebook outputs
+notebooks/**/*.nbconvert*.ipynb
+notebooks/**/.ipynb_checkpoints/
+
+# PyCharm
+.idea/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+.DocumentRevisions-V100
+.fseventsd
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+.apdisk
+
+# Podman local files
+*.podman-machine*
+podman-machine-state.json
+
+# Local notebooks directory 
+o
+p
+t
+i
+o
+n
+a
+l
+optional
+# Uncomment if you want to ignore the mounted notebooks directory
+# ~/jupyter-notebooks/
+
+# Logs
+*.log
+logs/
+.logs/
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Environment variables
+.env
+.env*
+
+# Local configuration overrides
+config.local.*
+settings.local.*
+
+# Build artifacts
+*.egg-info/
+.eggs/
+.cache/
+build/
+dist/
+.coverage
+.tox/
+
+# Docker/Podman
+.docker/
+.podman/
+*.tar.gz
+
+# IDE specific
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/**/*.code-snippets
+.history/
+.vs/
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Test outputs
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Also create a settings example file that CAN be committed:
+
+# Create this file as .vscode/settings.json.example for reference:
+
+# .vscode/settings.json.example
+# {
+# "jupyter.jupyterServerType": "remote",
+# "jupyter.notebookFileRoot": "${workspaceFolder}/notebooks",
+# "jupyter.remoteConnectionInfo": {
+# "url": "http://localhost:8890",
+# "token": "a12c30b161be74d88eadea4ebe25f275ef72d5ab59b7568d"
+# },
+# "jupyter.askForKernelRestart": false,
+# "jupyter.enableNativeInteractiveWindow": true,
+# "python.defaultInterpreterPath": "/opt/anaconda3/bin/python"
+# }
