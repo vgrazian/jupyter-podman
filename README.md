@@ -87,12 +87,12 @@ recommended
 2. In VS Code, open Command Palette
 3. Select `Jupyter: Select Notebook Kernel`
 4. Choose `Existing Jupyter Server`
-5. Paste the complete URL: `http://localhost:8890/?token=a12c30b161be74d88eadea4ebe25f275ef72d5ab59b7568d`
+5. Paste the complete URL: `http://localhost:8890/?token=a12c30b161be74d88exxxx75ef72d5ab59b7568d`
 
 Method 2: Separate URL and token
 
 1. URL: `http://localhost:8890`
-2. Token: `a12c30b161be74d88eadea4ebe25f275ef72d5ab59b7568d`
+2. Token: `a12c30b161be74dxxxxxf275ef72d5ab59b7568d`
 
 ## Persistence
 
@@ -170,7 +170,7 @@ chmod 755 ~/jupyter-notebooks
 
 ## Security Notes
 
-- The token `a12c30b161be74d88eadea4ebe25f275ef72d5ab59b7568d` is hard-coded for convenience
+- The token `a12c30b161be74xxxx25f275ef72d5ab59b7568d` is hard-coded for convenience
 - For production use, consider using a more secure token or enabling password authentication
 - The container only exposes port 8890 to your local machine
 - Jupyter runs as a non-root user inside the container
