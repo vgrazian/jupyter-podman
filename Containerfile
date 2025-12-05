@@ -29,6 +29,8 @@ EXPOSE 8888
 # Create notebooks directory
 RUN mkdir -p /workspace/notebooks
 
-# Set default command to start Jupyter Lab with your working token
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", \
-    "--ServerApp.token='a12c30b161be74d88eadea4ebe25f275ef72d5ab59b7568d'"]
+# Copy token file into container
+COPY --chown=jupyter:jupyter token.ini /tmp/token.ini
+
+# Set default command to start Jupyter Lab with token from file
+CMD ["sh", "-c", "TOKEN=$(grep '^token=' /tmp/token.ini | cut -d= -f2) && jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --ServerApp.token=\"$TOKEN\""]

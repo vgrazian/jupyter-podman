@@ -1,0 +1,4 @@
+# Jupyter authentication token
+# This file is ignored by git (.gitignore)
+# Generate a new token with: ./start-jupyter.sh token
+token=axxxxxxxx

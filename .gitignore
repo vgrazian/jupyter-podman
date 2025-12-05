@@ -1,16 +1,18 @@
 # .gitignore for Jupyter Podman Project
 
+# Token file
+token.ini
+
 # VS Code settings
 .vscode/
-!.vscode/settings.json.example # Keep example settings
+!.vscode/settings.json.example  # Keep example settings
+
+# Container build temporary files
+.container_token.ini
 
 # Python
 __pycache__/
-*.py
-c
-o
-d
-cod
+*.py[cod]
 *.pyo
 *.pyd
 .Python
@@ -52,16 +54,7 @@ notebooks/**/.ipynb_checkpoints/
 *.podman-machine*
 podman-machine-state.json
 
-# Local notebooks directory 
-o
-p
-t
-i
-o
-n
-a
-l
-optional
+# Local notebooks directory (optional)
 # Uncomment if you want to ignore the mounted notebooks directory
 # ~/jupyter-notebooks/
 
@@ -122,20 +115,3 @@ Desktop.ini
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
-
-# Also create a settings example file that CAN be committed:
-
-# Create this file as .vscode/settings.json.example for reference:
-
-# .vscode/settings.json.example
-# {
-# "jupyter.jupyterServerType": "remote",
-# "jupyter.notebookFileRoot": "${workspaceFolder}/notebooks",
-# "jupyter.remoteConnectionInfo": {
-# "url": "http://localhost:8890",
-# "token": "a12c30b161be74d88eadea4ebe25f275ef72d5ab59b7568d"
-# },
-# "jupyter.askForKernelRestart": false,
-# "jupyter.enableNativeInteractiveWindow": true,
-# "python.defaultInterpreterPath": "/opt/anaconda3/bin/python"
-# }
